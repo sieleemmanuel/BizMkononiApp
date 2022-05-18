@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Biz Mkononi App Test</string>
+
+    <string name="label_create_account">Create Account</string>
+    <string name="already_have_an_account">Already have an account? <b><u>Sign in</u></b></string>
+    <string name="resend_verification">Resend Verification SMS? <b><u>Resend</u></b></string>
+    <string name="verify_phone">Verify Phone? <b><u>Verify Phone</u></b></string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="no_an_account">Don\'t have an account yet? <b><u>Sign Up</u></b></string>
+    <string name="sign_in_label">Sign In</string>
+    <string name="remember_me_label">Remember Me</string>
+    <string name="businesses_label">Businesses</string>
+    <string name="account_label">Account</string>
+    <string name="customer_label">Customer</string>
+    <string name="register_label">Register</string>
+    <string name="searchview_hint">Search for insights, sale, customers</string>
+    <string name="welcome_text">Here is your todays overview insights</string>
+    <string name="overview_label">Overview</string>
+    <string name="sales_insights_label">Sales Insights</string>
+    <string name="customer_insights_label">Customer Insights</string>
+    <string name="chum_rates_insights_label">Chum Rates Insights</string>
+    <string name="revenue_insights_label">Revenue Insights</string>
+    <string name="insights_label">Insights</string>
+    <string name="sales_label">Sales</string>
+    <string name="supplies_label">Supplies</string>
+    <string name="finances_label">Finances</string>
+    <string name="customers_label">Customers</string>
+</resources>

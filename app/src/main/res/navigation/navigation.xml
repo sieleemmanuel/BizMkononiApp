@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/signIn">
+
+    <fragment
+        android:id="@+id/signIn"
+        android:name="com.siele.mkononiapptest.ui.SignIn"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signIn_to_customersInsights"
+            app:destination="@id/customersInsights" />
+        <action
+            android:id="@+id/action_signIn_to_salesInsights"
+            app:destination="@id/salesInsights" />
+        <action
+            android:id="@+id/action_signIn_to_signUp"
+            app:destination="@id/signUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.siele.mkononiapptest.ui.SignUp"
+        android:label="SignUp"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUp_to_signIn"
+            app:destination="@id/signIn" />
+    </fragment>
+    <fragment
+        android:id="@+id/customersInsights"
+        android:name="com.siele.mkononiapptest.ui.CustomersInsights"
+        android:label="fragment_customers_insights"
+        tools:layout="@layout/fragment_customers_insights" />
+    <fragment
+        android:id="@+id/salesInsights"
+        android:name="com.siele.mkononiapptest.ui.SalesInsights"
+        android:label="fragment_sales_insights"
+        tools:layout="@layout/fragment_sales_insights" />
+</navigation>

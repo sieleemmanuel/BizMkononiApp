@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/actionInsights"
+        android:icon="@drawable/ic_chart"
+        android:title="@string/insights_label"
+        app:showAsAction="always">
+        <menu>
+            <item android:title="@string/overview_label" />
+            <item
+                android:id="@+id/salesInsights"
+                android:title="@string/sales_insights_label" />
+            <item
+                android:id="@+id/customersInsights"
+                android:title="@string/customer_insights_label" />
+            <item android:title="@string/chum_rates_insights_label" />
+            <item android:title="@string/revenue_insights_label" />
+        </menu>
+    </item>
+    <item
+        android:icon="@drawable/ic_businesses"
+        android:iconTint="@color/black"
+        android:title="@string/businesses_label">
+        <menu>
+            <item android:title="@string/overview_label" />
+            <item
+
+                android:title="@string/sales_insights_label" />
+            <item
+                android:title="@string/customer_insights_label" />
+            <item android:title="@string/chum_rates_insights_label" />
+            <item android:title="@string/revenue_insights_label" />
+        </menu>
+    </item>
+    <item
+        android:icon="@drawable/ic_cart"
+        android:title="@string/sales_label">
+        <menu></menu>
+    </item>
+    <item
+
+        android:icon="@drawable/ic_supply"
+        android:title="@string/supplies_label">
+        <menu></menu>
+    </item>
+    <item
+        android:icon="@drawable/ic_money"
+        android:title="@string/finances_label">
+        <menu ></menu>
+    </item>
+    <item
+        android:icon="@drawable/ic_customers"
+        android:title="@string/customers_label">
+        <menu ></menu>
+    </item>
+
+</menu>
