@@ -1,24 +1,15 @@
 package com.siele.mkononiapptest.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.siele.mkononiapptest.R
-import com.siele.mkononiapptest.api.AuthApi
 import com.siele.mkononiapptest.databinding.FragmentSignUpBinding
-import com.siele.mkononiapptest.databinding.VerifyEmailDialogBinding
-import com.siele.mkononiapptest.model.User
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import com.siele.mkononiapptest.interfaces.DrawerAndBarsLocker
 
 
 class SignUp : Fragment() {
@@ -29,10 +20,13 @@ class SignUp : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentSignUpBinding.inflate(inflater)
+        (activity as DrawerAndBarsLocker).setDrawerLocked(true)
+        (activity as DrawerAndBarsLocker).setBarsLocked(true)
 
         binding.apply {
             buttonRegister.setOnClickListener {
-                if (signUpPassword.text.toString() == signUpConfirmPassword.text.toString()) {
+                findNavController().navigate(R.id.action_signUp_to_signIn)
+               /* if (signUpPassword.text.toString() == signUpConfirmPassword.text.toString()) {
                     val user = User(
                         signUpEmail.text.toString(),
                         signUpName.text.toString(),
@@ -70,7 +64,7 @@ class SignUp : Fragment() {
                 }else{
                     Toast.makeText(requireContext(), "Passwords do not match", Toast.LENGTH_SHORT)
                         .show()
-                }
+                }*/
                 tvResend.setOnClickListener {
                     Toast.makeText(requireContext(), "Wait for the code", Toast.LENGTH_SHORT).show()
                 }

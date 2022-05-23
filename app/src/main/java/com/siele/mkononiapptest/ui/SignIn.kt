@@ -4,35 +4,27 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.siele.mkononiapptest.R
-import com.siele.mkononiapptest.api.AuthApi
 import com.siele.mkononiapptest.databinding.FragmentSignInBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import com.siele.mkononiapptest.interfaces.DrawerAndBarsLocker
 
 class SignIn : Fragment() {
     private lateinit var binding: FragmentSignInBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        /*  val drawer = requireActivity().findViewById<DrawerLayout>(R.id.sideNav)
-          drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)*/
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentSignInBinding.inflate(inflater)
+        (activity as DrawerAndBarsLocker?)?.setDrawerLocked(true)
+        (activity as DrawerAndBarsLocker?)?.setBarsLocked(true)
 
         binding.apply {
             buttonSignIn.setOnClickListener {
-                lifecycleScope.launch {
+                findNavController().navigate(R.id.action_signIn_to_customersInsights)
+               /* lifecycleScope.launch {
                     val loginResponse = AuthApi.apiClient.loginUser(
                         signInPhone.toString(),
                         signInPassword.text.toString()
@@ -50,15 +42,19 @@ class SignIn : Fragment() {
                         }
                     }
 
-                }
+                }*/
             }
             tvSignUp.setOnClickListener {
                 findNavController().navigate(R.id.action_signIn_to_signUp)
             }
         }
-
-
         return binding.root
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        (activity as DrawerAndBarsLocker?)?.setDrawerLocked(false)
+        (activity as DrawerAndBarsLocker?)?.setBarsLocked(false)
     }
 
 }

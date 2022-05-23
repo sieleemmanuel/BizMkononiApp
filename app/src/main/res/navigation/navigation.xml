@@ -32,11 +32,11 @@
     <fragment
         android:id="@+id/customersInsights"
         android:name="com.siele.mkononiapptest.ui.CustomersInsights"
-        android:label="fragment_customers_insights"
+        android:label="@string/toolbar_title"
         tools:layout="@layout/fragment_customers_insights" />
     <fragment
         android:id="@+id/salesInsights"
         android:name="com.siele.mkononiapptest.ui.SalesInsights"
-        android:label="fragment_sales_insights"
+        android:label="@string/toolbar_title"
         tools:layout="@layout/fragment_sales_insights" />
 </navigation>

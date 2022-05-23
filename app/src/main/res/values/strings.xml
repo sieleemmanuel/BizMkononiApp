@@ -26,4 +26,15 @@
     <string name="supplies_label">Supplies</string>
     <string name="finances_label">Finances</string>
     <string name="customers_label">Customers</string>
+    <string name="week_days_label">Day of the week</string>
+    <string name="selected_date_label">Aug 26, 2021 - December 31, 2021</string>
+    <string name="repeat_purchase_label">Repeat Purchase</string>
+    <string name="new_users_label">New Users</string>
+    <string name="new_user_no">2000</string>
+    <string name="purchase_percent">8.5%</string>
+    <string name="percent_1_2">1.2%</string>
+    <string name="welcome_user_label">Welcome John Doe,</string>
+    <string name="rbtn_phone_calls_label">Phone Calls</string>
+    <string name="rbtn_gender_visit_buying_label">Gender,Visit Buying</string>
+    <string name="toolbar_title">Botique Shop</string>
 </resources>

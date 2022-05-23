@@ -5,11 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.AppBarConfiguration
 import com.siele.mkononiapptest.R
 import com.siele.mkononiapptest.databinding.FragmentCustomersInsightsBinding
+import com.siele.mkononiapptest.interfaces.DrawerClosed
+import com.siele.mkononiapptest.interfaces.DrawerAndBarsLocker
 
 class CustomersInsights : Fragment() {
     private lateinit var binding: FragmentCustomersInsightsBinding
@@ -19,8 +18,16 @@ class CustomersInsights : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCustomersInsightsBinding.inflate(inflater)
-        binding.searchView.queryHint = getString(R.string.searchview_hint)
+        (activity as DrawerAndBarsLocker?)?.setDrawerLocked(false)
+        (activity as DrawerAndBarsLocker?)?.setBarsLocked(false)
+        (activity as DrawerClosed).closeDrawer(true)
 
+        binding.apply {
+            /*customersInsightsToolbar.setNavigationOnClickListener {
+                (activity as DrawerClosed).openDrawer(true)
+            }*/
+            searchView.queryHint = getString(R.string.searchview_hint)
+        }
         return binding.root
     }
 }
