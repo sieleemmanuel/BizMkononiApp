@@ -32,4 +32,7 @@
         <item name="titleCentered">true</item>
         <item name="titleTextColor">@color/white</item>
     </style>
+    <style name="SearchViewStyle" parent="Theme.MkononiAppTest">
+        <item name="colorControlActivated">@color/purple_500</item>
+    </style>
 </resources>

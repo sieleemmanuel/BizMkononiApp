@@ -39,6 +39,8 @@
         app:cnb_menuResource="@menu/bottom_nav_menu"
         app:cnb_orientationMode="horizontal"
         app:cnb_radius="5dp"
+        app:cnb_animationDuration="@integer/material_motion_duration_short_1"
+        android:animationCache="true"
         app:cnb_unselectedColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
