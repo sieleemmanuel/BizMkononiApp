@@ -33,10 +33,18 @@
         android:id="@+id/customersInsights"
         android:name="com.siele.mkononiapptest.ui.CustomersInsights"
         android:label="@string/toolbar_title"
-        tools:layout="@layout/fragment_customers_insights" />
+        tools:layout="@layout/fragment_customers_insights" >
+        <action
+            android:id="@+id/action_customersInsights_to_salesInsights"
+            app:destination="@id/salesInsights" />
+    </fragment>
     <fragment
         android:id="@+id/salesInsights"
         android:name="com.siele.mkononiapptest.ui.SalesInsights"
         android:label="@string/toolbar_title"
-        tools:layout="@layout/fragment_sales_insights" />
+        tools:layout="@layout/fragment_sales_insights" >
+        <action
+            android:id="@+id/action_salesInsights_to_customersInsights"
+            app:destination="@id/customersInsights" />
+    </fragment>
 </navigation>
