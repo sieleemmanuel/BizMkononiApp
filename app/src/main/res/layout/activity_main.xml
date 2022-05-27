@@ -6,15 +6,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/MainToolbarStyle" />
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/navigation" />
+        app:navGraph="@navigation/navigation"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"/>
 
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#B9DFFC"
+        app:cnb_menuResource="@menu/bottom_nav_menu"
+        app:cnb_orientationMode="horizontal"
+        app:cnb_radius="5dp"
+        app:cnb_animationDuration="@integer/material_motion_duration_short_1"
+        android:animationCache="true"
+        app:cnb_unselectedColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/sideNav"
         android:layout_width="match_parent"
@@ -22,8 +53,18 @@
         android:background="#B9DFFC"
         app:headerLayout="@layout/header_side_nav"
         android:layout_gravity="start"
-        app:menu="@menu/side_nav_menu"
         >
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="170dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:dividerHeight="0dp"
+            android:divider="@null"
+            android:groupIndicator="@android:color/transparent"/>
 
     </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

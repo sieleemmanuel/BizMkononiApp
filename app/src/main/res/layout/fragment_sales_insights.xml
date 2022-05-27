@@ -6,30 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.SalesInsights">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/customersInsightsToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="@color/purple_500"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_navbar"
-        app:title="Botique Shop"
-        app:titleCentered="true"
-        app:titleTextColor="@color/white" />
-    <TextView
+     <TextView
         android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:text="Welcome John Doe,"
+        android:text="@string/welcome_user_label"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#43B3E8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/customersInsightsToolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -40,26 +28,27 @@
         android:background="@android:color/transparent"
         android:src="@drawable/ic_alert"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/customersInsightsToolbar" />
+        app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Here is your todays overview insights"
-        android:textSize="16sp"
+        android:text="@string/welcome_text"
         app:layout_constraintStart_toStartOf="@+id/tvWelcome"
         app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
 
-    <SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        app:iconifiedByDefault="false"
+        android:focusableInTouchMode="true"
+        android:theme="@style/SearchViewStyle"
         android:background="@drawable/search_view_bcg"
-        android:queryHint="Search for insights, sale, customers"
+        app:defaultQueryHint="@string/searchview_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -101,7 +90,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="24dp"
-                        android:text="2000"
+                        android:text="@string/new_user_no"
                         android:textColor="#43B3E8"
                         android:textSize="34sp"
                         android:textStyle="bold"
@@ -115,7 +104,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="New Users"
+                        android:text="@string/new_users_label"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -148,7 +137,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="24dp"
-                        android:text="8.5%"
+                        android:text="@string/purchase_percent"
                         android:textColor="#43B3E8"
                         android:textSize="34sp"
                         android:textStyle="bold"
@@ -162,7 +151,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="Repeat Purchase"
+                        android:text="@string/repeat_purchase_label"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -195,7 +184,7 @@
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="32dp"
-                        android:text="1.2%"
+                        android:text="@string/percent_1_2"
                         android:textColor="#43B3E8"
                         android:textSize="34sp"
                         android:textStyle="bold"
@@ -209,7 +198,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="New Users"
+                        android:text="@string/new_users_label"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -241,6 +230,7 @@
             android:layout_height="wrap_content"
             android:hint=""
             android:textSize="16sp"
+            android:inputType="none"
             android:text="Most Selling Products"
             android:textColor="#43B3E8" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -267,25 +257,25 @@
             android:padding="0dp"
             android:hint=""
             android:textSize="12sp"
-            android:text="Day of the week"
+            android:inputType="none"
+            android:text="@string/week_days_label"
             android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="15dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="250dp">
 
             <org.eazegraph.lib.charts.PieChart
                 android:layout_width="100dp"
@@ -297,18 +287,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
-
-    <com.ismaeldivita.chipnavigation.ChipNavigationBar
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="#B9DFFC"
-        app:cnb_menuResource="@menu/bottom_nav_menu"
-        app:cnb_orientationMode="horizontal"
-        app:cnb_radius="5dp"
-        app:cnb_unselectedColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

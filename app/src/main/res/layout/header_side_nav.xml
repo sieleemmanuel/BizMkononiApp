@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvProfileName" />
 
     <ImageButton
-        android:id="@+id/imageButtonClose"
+        android:id="@+id/ibCloseDrawer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -65,6 +65,6 @@
         android:background="#474747"
         app:layout_constraintStart_toStartOf="@+id/materialCardView"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView"
-        app:layout_constraintEnd_toEndOf="@id/imageButtonClose"/>
+        app:layout_constraintEnd_toEndOf="@id/ibCloseDrawer"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

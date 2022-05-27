@@ -1,15 +1,14 @@
 package com.siele.mkononiapptest.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import com.siele.mkononiapptest.R
+import androidx.fragment.app.Fragment
+import com.siele.mkononiapptest.MainActivity
 import com.siele.mkononiapptest.databinding.FragmentCustomersInsightsBinding
+import com.siele.mkononiapptest.interfaces.DrawerAndBarsLocker
+import com.siele.mkononiapptest.interfaces.DrawerClosed
 
 class CustomersInsights : Fragment() {
     private lateinit var binding: FragmentCustomersInsightsBinding
@@ -19,7 +18,15 @@ class CustomersInsights : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCustomersInsightsBinding.inflate(inflater)
-        binding.searchView.queryHint = getString(R.string.searchview_hint)
+        (activity as DrawerAndBarsLocker?)?.setDrawerLocked(false)
+        (activity as DrawerAndBarsLocker?)?.setBarsLocked(false)
+        (activity as DrawerClosed).closeDrawer(true)
+
+        (activity as MainActivity?)!!.apply {
+            handleSideNavClicks()
+            updateBottomNav()
+            handleBottomNavActions()
+        }
 
         return binding.root
     }
