@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.siele.mkononiapptest.MainActivity
 import com.siele.mkononiapptest.databinding.FragmentSalesInsightsBinding
 import com.siele.mkononiapptest.interfaces.DrawerClosed
 import com.siele.mkononiapptest.interfaces.DrawerAndBarsLocker
@@ -21,16 +22,11 @@ class SalesInsights : Fragment() {
         (activity as DrawerAndBarsLocker?)?.setBarsLocked(false)
         (activity as DrawerClosed).closeDrawer(true)
 
-        /*binding.salesInsightsToolbar.setNavigationOnClickListener {
-            (activity as DrawerClosed).openDrawer(true)
+        (activity as MainActivity?)!!.apply {
+            handleSideNavClicks()
+            updateBottomNav()
+            handleBottomNavActions()
         }
-        binding.bottomNav.setOnItemSelectedListener {
-            when(it){
-               R.id.actionCustomerISights ->{
-                   findNavController().navigate(R.id.action_signIn_to_customersInsights)
-               }
-            }
-        }*/
         return binding.root
     }
 }
