@@ -63,6 +63,7 @@
                 android:background="@drawable/search_view_bcg"
                 app:defaultQueryHint="@string/searchview_hint"
                 app:iconifiedByDefault="false"
+                app:queryBackground="@null"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4"/>
