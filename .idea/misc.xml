@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/edittext_bcg.xml" value="0.22760416666666666" />
         <entry key="app/src/main/res/drawable/ic_alert.xml" value="0.22760416666666666" />
         <entry key="app/src/main/res/drawable/ic_arrow_drop.xml" value="0.22760416666666666" />
+        <entry key="app/src/main/res/drawable/ic_avatar.xml" value="0.134" />
         <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.22760416666666666" />
         <entry key="app/src/main/res/drawable/ic_businesses.xml" value="0.1415" />
         <entry key="app/src/main/res/drawable/ic_calendar.xml" value="0.22760416666666666" />
@@ -30,7 +31,7 @@
         <entry key="app/src/main/res/layout/array_list_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_customers_insights.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_sales_insights.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_sign_in.xml" value="0.21145833333333333" />
+        <entry key="app/src/main/res/layout/fragment_sign_in.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.25" />
         <entry key="app/src/main/res/layout/group_header_item.xml" value="0.21145833333333333" />
         <entry key="app/src/main/res/layout/header_side_nav.xml" value="0.21145833333333333" />
