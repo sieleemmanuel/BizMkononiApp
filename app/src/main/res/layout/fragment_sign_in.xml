@@ -10,7 +10,7 @@
     android:layout_height="wrap_content"
     tools:context=".ui.SignIn"
     android:padding="24dp"
-    android:background="#154477"
+    android:background="@color/dark_blue"
     android:theme="@style/textViewtextColor"
     >
 
