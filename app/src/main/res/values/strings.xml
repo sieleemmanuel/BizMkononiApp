@@ -15,7 +15,7 @@
     <string name="customer_label">Customer</string>
     <string name="register_label">Register</string>
     <string name="searchview_hint">Search for insights, sale, customers</string>
-    <string name="welcome_text">Here is your todays overview insights</string>
+    <string name="welcome_text">Here is your today\'s overview insights</string>
     <string name="overview_label">Overview</string>
     <string name="sales_insights_label">Sales Insights</string>
     <string name="customer_insights_label">Customer Insights</string>
@@ -37,4 +37,5 @@
     <string name="rbtn_phone_calls_label">Phone Calls</string>
     <string name="rbtn_gender_visit_buying_label">Gender,Visit Buying</string>
     <string name="toolbar_title">Botique Shop</string>
+    <string name="roses_pec_label">Roses</string>
 </resources>

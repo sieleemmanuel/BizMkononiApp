@@ -22,6 +22,7 @@
         <entry key="app/src/main/res/drawable/ic_person.xml" value="0.22760416666666666" />
         <entry key="app/src/main/res/drawable/ic_pullet_point.xml" value="0.196" />
         <entry key="app/src/main/res/drawable/round_stroke_bcg.xml" value="0.22760416666666666" />
+        <entry key="app/src/main/res/drawable/rounded_bcg.xml" value="0.134" />
         <entry key="app/src/main/res/drawable/search_view_bcg.xml" value="0.22760416666666666" />
         <entry key="app/src/main/res/drawable/text_selector.xml" value="0.22760416666666666" />
         <entry key="app/src/main/res/drawable/toggle_off.xml" value="0.22760416666666666" />
@@ -29,8 +30,8 @@
         <entry key="app/src/main/res/drawable/toggle_selector.xml" value="0.22760416666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20555555555555555" />
         <entry key="app/src/main/res/layout/array_list_item.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_customers_insights.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_sales_insights.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_customers_insights.xml" value="0.19947916666666668" />
+        <entry key="app/src/main/res/layout/fragment_sales_insights.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_sign_in.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.25" />
         <entry key="app/src/main/res/layout/group_header_item.xml" value="0.21145833333333333" />
