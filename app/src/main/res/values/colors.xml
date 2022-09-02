@@ -9,4 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="dark_blue">#154477</color>
+    <color name="roses_color">#5035E6</color>
+    <color name="daffoiles_color">#1864A1</color>
+    <color name="lilies_color">#07DBF6</color>
+    <color name="daises_color">#044F59</color>
 </resources>
